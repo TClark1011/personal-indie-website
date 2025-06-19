@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+
+	background: none;
+	border: none;
+	list-style: none;
+
+	font-size: 1rem;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	min-height: 100vh;
+}
+
+strong,
+bold {
+	&,
+	* {
+		font-weight: bold;
+	}
+}
+
+em,
+i {
+	&,
+	* {
+		font-style: italic;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+svg {
+	display: block;
+}
