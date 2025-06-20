@@ -1,0 +1,9 @@
+@use "./theme.scss";
+
+* {
+	font-family: theme.$font-main;
+}
+
+html {
+	font-size: 20px;
+}

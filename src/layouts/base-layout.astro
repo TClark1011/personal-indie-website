@@ -1,6 +1,7 @@
 ---
 import "../styles/reset.scss";
 import "../styles/fonts.scss";
+import "../styles/global.scss";
 ---
 
 <html lang="en">
@@ -41,7 +42,7 @@ import "../styles/fonts.scss";
 		width: 100%;
 		height: 26px;
 
-		background-color: #4f56f9;
+		background-color: theme.$color-primary;
 		border-bottom: 1px solid black;
 	}
 
@@ -53,8 +54,6 @@ import "../styles/fonts.scss";
 		height: 100%;
 		background-color: black;
 
-		font-family: theme.$font-main;
-		font-size: 1.2rem;
 		color: white;
 	}
 </style>
