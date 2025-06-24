@@ -1,15 +1,15 @@
 {
-  "name": "personal-indie-website",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.9.4",
-    "sass": "^1.89.2"
-  }
+	"name": "personal-indie-website",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^5.10.1",
+		"sass": "^1.89.2"
+	}
 }

@@ -4,3 +4,9 @@ html {
 	font-family: theme.$font-main;
 	font-size: 20px;
 }
+
+// Astro `Image` component
+img[data-image-component="true"] {
+	object-fit: cover;
+	// max-width: 100%;
+}

@@ -1,0 +1,51 @@
+---
+import Section from "@/layouts/section.astro";
+import catsCouch from "@/assets/images/cats/cats-couch.jpg";
+import whibblesSleep from "@/assets/images/cats/whibbles-sleep.jpg";
+import whibblesPerch from "@/assets/images/cats/whibbles-perch.jpg";
+import { Image } from "astro:assets";
+---
+
+<Section>
+	<h1>Cats</h1>
+	<p>I have two cats named Whibbles and Dumpling:</p>
+	<Image
+		id="couch"
+		src={catsCouch}
+		alt="Whibbles (black) and Dumpling (orange) cuddling on the couch"
+		width={600}
+		height={600}
+	/>
+	<p><sup>(Whibbles is the black one, Dumpling is the orange one)</sup></p>
+
+	<p>
+		Whibbles is the older of the two (born in 2023), I adopted him in 2024. He
+		is the first cat I have ever owned. He is extremely shy and trying to
+		interact with him or show affection can be tricky, you have to let him start
+		things his own way. Even now he won't let me walk up to him and give him
+		pats, I have to wait for him to come to me.
+	</p>
+
+	<Image src={whibblesSleep} alt="Whibbles sleeping" width={800} height={500} />
+
+	<p>
+		Whibbles' favourite spot to relax is up on his cat perch, sometimes you can
+		even catch him striking his superman pose.
+	</p>
+
+	<Image
+		src={whibblesPerch}
+		alt="Whibbles on his perch doing his superman pose"
+		width={800}
+		height={600}
+	/>
+
+	<style lang="scss">
+		img {
+			max-width: 100%;
+		}
+		#couch {
+			width: 100%;
+		}
+	</style>
+</Section>

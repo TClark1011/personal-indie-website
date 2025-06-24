@@ -4,7 +4,9 @@ import BaseLayout from "@/layouts/base-layout.astro";
 
 <BaseLayout>
 	<main id="content">
-		<slot />
+		<div id="container">
+			<slot />
+		</div>
 	</main>
 </BaseLayout>
 
@@ -12,6 +14,9 @@ import BaseLayout from "@/layouts/base-layout.astro";
 	@use "../styles/theme.scss";
 
 	#content {
+		display: flex;
+		justify-content: center;
+
 		font-family: "Times New Roman", Times, serif;
 		height: 100%;
 		padding: theme.$spacing-3 theme.$spacing-4;
@@ -34,5 +39,10 @@ import BaseLayout from "@/layouts/base-layout.astro";
 
 	#content :global(p) {
 		font-size: 16px;
+	}
+
+	#container {
+		width: 100%;
+		max-width: 600px;
 	}
 </style>
