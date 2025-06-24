@@ -2,6 +2,7 @@
 import "../styles/reset.scss";
 import "../styles/fonts.scss";
 import "../styles/global.scss";
+import Link from "@/components/link.astro";
 ---
 
 <html lang="en">
@@ -16,22 +17,20 @@ import "../styles/global.scss";
 		<div id="top">
 			<span class="label"> Thomas Clark </span>
 		</div>
+		<nav id="sections-nav">
+			<Link class="link" href="/sections/about-me">About Me</Link>
+			<Link class="link" href="/sections/keyboards">Keyboards</Link>
+		</nav>
 		<slot />
 	</body>
 </html>
 
 <style lang="scss">
 	@use "../styles/theme.scss";
+
 	body {
 		width: 100vw;
 		min-height: 100vh;
-
-		backdrop-filter: blur(4px);
-
-		background-size: cover;
-		background-position: center center;
-		background-repeat: repeat;
-		background-image: url("/assets/images/bg.svg");
 	}
 
 	#top {
@@ -55,5 +54,34 @@ import "../styles/global.scss";
 		background-color: black;
 
 		color: white;
+	}
+
+	#sections-nav {
+		display: flex;
+
+		width: 100%;
+		padding: 0 theme.$spacing-2;
+
+		background-color: theme.$color-secondary;
+		border-bottom: 1px solid black;
+	}
+
+	#sections-nav .link {
+		--border-color: transparent;
+
+		border-left: 1px solid var(--border-color);
+		border-right: 1px solid var(--border-color);
+
+		padding: 0 theme.$spacing-1;
+
+		&:hover,
+		&[data-active] {
+			--border-color: black;
+		}
+
+		&::first-letter {
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+		}
 	}
 </style>
