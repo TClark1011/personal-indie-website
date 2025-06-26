@@ -1,8 +1,14 @@
 ---
 import Section from "@/layouts/section.astro";
 import catsCouch from "@/assets/images/cats/cats-couch.jpg";
+import catsWindow from "@/assets/images/cats/cats-window.jpg";
+import catsChair from "@/assets/images/cats/cats-chair.jpg";
 import whibblesSleep from "@/assets/images/cats/whibbles-sleep.jpg";
 import whibblesPerch from "@/assets/images/cats/whibbles-perch.jpg";
+import whibblesGoofy from "@/assets/images/cats/whibbles-goofy.jpg";
+import dumplingKitten from "@/assets/images/cats/dumpling-kitten-leg.jpg";
+import dumplingHappy from "@/assets/images/cats/dumpling-happy.jpg";
+import dumplingSitting from "@/assets/images/cats/dumpling-sit-up.jpg";
 import { Image } from "astro:assets";
 ---
 
@@ -10,7 +16,6 @@ import { Image } from "astro:assets";
 	<h1>Cats</h1>
 	<p>I have two cats named Whibbles and Dumpling:</p>
 	<Image
-		id="couch"
 		src={catsCouch}
 		alt="Whibbles (black) and Dumpling (orange) cuddling on the couch"
 		width={600}
@@ -32,6 +37,13 @@ import { Image } from "astro:assets";
 
 	<Image src={whibblesSleep} alt="Whibbles sleeping" width={800} height={500} />
 
+	<Image
+		src={whibblesGoofy}
+		alt="Whibbles in a goofy pose"
+		width={600}
+		height={600}
+		style="object-position: center 30%"
+	/>
 	<br />
 	<br />
 
@@ -46,13 +58,68 @@ import { Image } from "astro:assets";
 		width={800}
 		height={600}
 	/>
-</Section>
+	<br />
+	<br />
 
-<style lang="scss">
-	img {
-		max-width: 100%;
-	}
-	#couch {
-		width: 100%;
-	}
-</style>
+	<p>
+		Dumpling is the younger of the two (born in 2024), I adopted her in 2025
+		when she was only 4 months old. I chose to adopt her because I had just
+		started a new job and was going into the office most days, and I didn't want
+		Whibbles to be lonely.
+	</p>
+	<br />
+	<Image
+		src={dumplingKitten}
+		alt="Dumpling at 4 months old lying on my leg"
+		height={400}
+		width={600}
+		style="object-position: center 60%"
+	/>
+	<br />
+	<br />
+
+	<p>
+		Dumpling is quite different from Whibbles. She is extremely outgoing and
+		playful. She is very demanding when it comes to affection, and will be very
+		vocal about if she feels she isn't receiving enough attention.
+	</p>
+
+	<br />
+
+	<Image
+		src={dumplingHappy}
+		alt="Dumpling making a goofy face as she yells for attention"
+		height={800}
+		width={600}
+		style="object-position: center top"
+	/>
+	<Image
+		src={dumplingSitting}
+		alt="Dumpling sitting like a human"
+		height={800}
+		width={600}
+	/>
+
+	<br />
+	<br />
+
+	<p>
+		The two of them get on extremely well, they love playing and taking naps
+		together.
+	</p>
+
+	<br />
+
+	<Image
+		src={catsWindow}
+		alt="Whibbles and Dumpling chilling in little hammock"
+		width={600}
+		height={600}
+	/>
+	<Image
+		src={catsChair}
+		alt="Whibbles and Dumpling napping in my office chair"
+		width={600}
+		height={600}
+	/>
+</Section>
