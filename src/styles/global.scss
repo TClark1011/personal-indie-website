@@ -1,12 +1,14 @@
 @use "./theme.scss";
 
 html {
-	font-family: theme.$font-main;
-	font-size: 20px;
+	@include theme.base-theme;
+	@include theme.color-scheme-light;
+
+	font-family: var(--font-retro);
+	font-size: var(--font-size-ui);
 }
 
 // Astro `Image` component
 img[data-image-component="true"] {
 	object-fit: cover;
-	// max-width: 100%;
 }

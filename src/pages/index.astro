@@ -1,16 +1,15 @@
 ---
+import Panel from "@/components/panel.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 ---
 
 <BaseLayout>
 	<div class="container">
-		<div class="card">Whats all this then?</div>
+		<Panel class="card">Whats all this then?</Panel>
 	</div>
 </BaseLayout>
 
 <style lang="scss">
-	@use "../styles/theme.scss";
-
 	:global(body) {
 		backdrop-filter: blur(4px);
 
@@ -25,7 +24,7 @@ import BaseLayout from "../layouts/base-layout.astro";
 		justify-content: center;
 		align-items: center;
 
-		padding: theme.$spacing-2;
+		padding: var(--spacing-2);
 
 		width: 100%;
 	}
@@ -33,10 +32,6 @@ import BaseLayout from "../layouts/base-layout.astro";
 	.card {
 		width: 100%;
 		max-width: 600px;
-
-		background-color: theme.$color-surface;
-		border: 1px solid black;
-		padding: theme.$spacing-3;
 
 		text-align: center;
 	}

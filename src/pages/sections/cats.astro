@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 ---
 
 <Section>
+	<br />
 	<h1>Cats</h1>
 	<p>I have two cats named Whibbles and Dumpling:</p>
 	<Image
@@ -18,6 +19,8 @@ import { Image } from "astro:assets";
 	/>
 	<p><sup>(Whibbles is the black one, Dumpling is the orange one)</sup></p>
 
+	<br />
+
 	<p>
 		Whibbles is the older of the two (born in 2023), I adopted him in 2024. He
 		is the first cat I have ever owned. He is extremely shy and trying to
@@ -26,7 +29,12 @@ import { Image } from "astro:assets";
 		pats, I have to wait for him to come to me.
 	</p>
 
+	<br />
+
 	<Image src={whibblesSleep} alt="Whibbles sleeping" width={800} height={500} />
+
+	<br />
+	<br />
 
 	<p>
 		Whibbles' favourite spot to relax is up on his cat perch, sometimes you can
@@ -39,13 +47,13 @@ import { Image } from "astro:assets";
 		width={800}
 		height={600}
 	/>
-
-	<style lang="scss">
-		img {
-			max-width: 100%;
-		}
-		#couch {
-			width: 100%;
-		}
-	</style>
 </Section>
+
+<style lang="scss">
+	img {
+		max-width: 100%;
+	}
+	#couch {
+		width: 100%;
+	}
+</style>

@@ -11,15 +11,13 @@ import BaseLayout from "@/layouts/base-layout.astro";
 </BaseLayout>
 
 <style lang="scss">
-	@use "../styles/theme.scss";
-
 	#content {
 		display: flex;
 		justify-content: center;
 
 		font-family: "Times New Roman", Times, serif;
 		height: 100%;
-		padding: theme.$spacing-3 theme.$spacing-4;
+		padding: var(--spacing-3) var(--spacing-4);
 	}
 
 	#content :global(:where(h1, h2, h3, h4, h5, h6)) {

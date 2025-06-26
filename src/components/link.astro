@@ -2,7 +2,8 @@
 /**
  * Unstyled link component with prefetching shorthand.
  *
- * If the link points to the current page, it will have a `data-active` attribute.
+ * If the link points to the current page, it will have
+ * a `data-state="active"` attribute.
  */
 import type { HTMLAttributes } from "astro/types";
 import { catchFallback } from "@/utils";
@@ -32,17 +33,9 @@ const isActive = hrefPathname === Astro.url.pathname;
 	data-component-link
 	class:list={["link", rest.class]}
 	href={href}
+	data-state={isActive ? "active" : ""}
 	{...prefetchSpread}
-	{...isActive ? { "data-active": "" } : {}}
 	{...rest}
 >
 	<slot />
 </a>
-
-<!-- <script>
-	document.querySelectorAll("[data-component-link]").forEach((el) => {
-		const href = el.getAttribute("href");
-		el.dataset.to;
-		el.classList.toggle("active", href === location.pathname);
-	});
-</script> -->
