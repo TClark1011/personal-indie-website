@@ -24,7 +24,8 @@ dt,
 dd,
 blockquote,
 pre,
-code {
+code,
+button {
 	font-size: 1rem;
 	font-weight: normal;
 	font-style: normal;
@@ -53,4 +54,9 @@ a {
 
 svg {
 	display: block;
+}
+
+dialog {
+	max-height: unset;
+	max-width: unset;
 }

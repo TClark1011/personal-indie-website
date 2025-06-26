@@ -1,0 +1,7 @@
+$bp-mobile: 600px;
+
+@mixin breakpoint($option, $bp) {
+	@media (#{$option}-width: $bp) {
+		@content;
+	}
+}
