@@ -1,4 +1,4 @@
-@mixin base-theme() {
+@mixin base-theme {
 	--font-retro: Fixedsys, monospace;
 	--font-size-ui: 20px;
 
@@ -9,8 +9,25 @@
 	--spacing-5: 64px;
 }
 
+@mixin color-scheme($surface, $content-bg, $content-fg) {
+	--color-surface: #{$surface};
+
+	--color-content-bg: #{$content-bg};
+	--color-content-fg: #{$content-fg};
+}
+
 @mixin color-scheme-light() {
-	--color-primary: #4f56f9;
-	--color-secondary: #4ffefd;
-	--color-surface: #fefefe;
+	@include color-scheme(
+		$surface: #fefefe,
+		$content-bg: white,
+		$content-fg: black
+	);
+}
+
+@mixin color-scheme-dark() {
+	@include color-scheme(
+		$surface: #252931,
+		$content-bg: black,
+		$content-fg: white
+	);
 }

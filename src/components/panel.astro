@@ -1,5 +1,5 @@
 ---
-import { HTMLAttributes } from "astro/types";
+import type { HTMLAttributes } from "astro/types";
 
 export type Props = HTMLAttributes<"div">;
 
@@ -13,6 +13,8 @@ const { class: classProp, ...rest } = Astro.props;
 <style lang="scss">
 	.root {
 		background-color: var(--color-surface);
+		color: var(--color-content-fg);
+
 		padding: var(--spacing-surface);
 		border: 1px solid black;
 		padding: var(--spacing-3);

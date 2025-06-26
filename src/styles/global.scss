@@ -4,8 +4,17 @@ html {
 	@include theme.base-theme;
 	@include theme.color-scheme-light;
 
+	@media (prefers-color-scheme: dark) {
+		@include theme.color-scheme-dark;
+	}
+
 	font-family: var(--font-retro);
 	font-size: var(--font-size-ui);
+}
+
+body {
+	background-color: var(--color-content-bg);
+	color: var(--color-content-fg);
 }
 
 // Astro `Image` component
